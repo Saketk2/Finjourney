@@ -5,7 +5,7 @@ const IntroScreenThree = () => (
   <View style={styles.container}>
     <View style={styles.content}>
       <Image
-        source={require('../images/IntroHikingMan.png')}
+        source={require('../images/Astronaut.png')}
         style={styles.image}
       />
       <Text style={styles.title}>On Your</Text>

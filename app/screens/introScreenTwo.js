@@ -5,7 +5,7 @@ const IntroScreenTwo = () => (
   <View style={styles.container}>
     <View style={styles.content}>
       <Image
-        source={require('../images/IntroHikingMan.png')}
+        source={require('../images/Explorer.png')}
         style={styles.image}
       />
       <Text style={styles.title}>Create</Text>
