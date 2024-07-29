@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react'; // Import useState
 import { View, StyleSheet, Image, TouchableOpacity, Text } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const GoalIdeas = () => {
+  const navigation = useNavigation();
+
+  const handleIdeaPage = () => {
+    navigation.navigate('GoalInput'); // Ensure 'GoalInput' is the correct name used in your navigator
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.row}>
@@ -68,7 +75,7 @@ const GoalIdeas = () => {
           <Text style={styles.imageText}>Buy a Mother's Day present</Text>
         </View>
       </View>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={handleIdeaPage}>
         <Text style={styles.buttonText}>I'm Ready!</Text>
       </TouchableOpacity>
     </View>
@@ -100,7 +107,7 @@ const styles = StyleSheet.create({
   imageText: {
     position: 'absolute',
     bottom: 10,
-    left: 30,
+    left: 10,
     color: '#000000',
     fontSize: 14,
     fontWeight: 'bold',

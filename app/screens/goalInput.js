@@ -10,6 +10,10 @@ const GoalInput = ({ handleNextPage }) => {
     navigation.navigate('GoalIdeas'); // Ensure 'GoalIdeas' is the correct name used in your navigator
   };
 
+  const handleNext = () => {
+    navigation.navigate('TimeInput'); 
+  };
+
   return (
     <View style={styles.container}>
       <Image
@@ -28,8 +32,8 @@ const GoalInput = ({ handleNextPage }) => {
         <TouchableOpacity style={styles.button} onPress={handleIdeaPage}>
           <Text style={styles.buttonText}>Got Ideas?</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={handleNextPage}>
-          <Text style={styles.buttonText}>I'm Ready!</Text>
+        <TouchableOpacity style={styles.button} onPress={handleNext}>
+          <Text style={styles.buttonText}>Let's Go!</Text>
         </TouchableOpacity>
       </View>
     </View>
