@@ -6,7 +6,11 @@ const ModeSelector = () => {
   const navigation = useNavigation();
 
   const handleNextPage = () => {
-    navigation.navigate('GoalIdeas'); 
+    navigation.navigate('Friends'); 
+  };
+
+  const handleSoloMode = () => {
+    navigation.navigate('GoalInput'); 
   };
 
   return (
@@ -38,7 +42,7 @@ const ModeSelector = () => {
           source={require('../images/Solo.png')}
           style={styles.image}
         />
-        <TouchableOpacity style={styles.button} onPress={handleNextPage}>
+        <TouchableOpacity style={styles.button} onPress={handleSoloMode}>
           <Text style={styles.buttonText}>Solo Mode</Text>
         </TouchableOpacity>
         <Text style={styles.description}>You can always invite your friends later!</Text>
