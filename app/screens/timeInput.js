@@ -36,6 +36,7 @@ const TimeInput = () => {
             { label: 'Hours', value: 'Hours' },
             { label: 'Days', value: 'Days' },
             { label: 'Weeks', value: 'Weeks' },
+            { label: 'Months', value: 'Months' }
           ]}
           style={pickerStyles}
           value={unit}

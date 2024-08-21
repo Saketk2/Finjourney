@@ -16,7 +16,7 @@ const IntroScreenOne = () => (
       />
       <Text style={styles.title}>Welcome to</Text>
       <Text style={styles.finjourney}>Finjourney</Text>
-      <Text style={styles.description}>We make your financial dreams materialize - and the rest, exciting.</Text>
+      <Text style={styles.description}>We make your financial dreams materialize.</Text>
     </View>
   </LinearGradient>
 );
