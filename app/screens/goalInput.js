@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   description: {
-    fontSize: 15,
+    fontSize: 18, // Adjusted font size for the description
     fontWeight: 'bold',
     color: '#654321',
     marginBottom: 20,
