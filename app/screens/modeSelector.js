@@ -6,7 +6,7 @@ const ModeSelector = () => {
   const navigation = useNavigation();
 
   const handleNextPage = () => {
-    navigation.navigate('Friends'); 
+    navigation.navigate('Learn'); 
   };
 
   const handleSoloMode = () => {

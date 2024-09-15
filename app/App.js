@@ -7,6 +7,7 @@ import GoalIdeas from './screens/goalIdeas';
 import TimeInput from './screens/timeInput';
 import ModeSelector from './screens/modeSelector';
 import Friends from './screens/friends';
+import Learn from './screens/learn';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,7 @@ const App = () => {
         <Stack.Screen name="TimeInput" component={TimeInput} />
         <Stack.Screen name="ModeSelector" component={ModeSelector} />
         <Stack.Screen name="Friends" component={Friends} />
+        <Stack.Screen name="Learn" component={Learn} />
       </Stack.Navigator>
     </NavigationContainer>
   );
