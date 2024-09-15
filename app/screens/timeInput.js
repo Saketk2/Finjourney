@@ -44,7 +44,7 @@ const TimeInput = () => {
       </View>
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button} onPress={handleNextPage}>
-          <Text style={styles.buttonText}>Last Step...</Text>
+          <Text style={styles.buttonText}>Last Step</Text>
         </TouchableOpacity>
       </View>
     </View>
