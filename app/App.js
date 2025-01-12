@@ -2,6 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'; // Add this import
+import { Ionicons } from '@expo/vector-icons';
 import Icon from 'react-native-vector-icons/Ionicons';
 import IntroScreens from './screens/introScreens';
 import GoalInput from './screens/goalInput';
@@ -25,21 +26,24 @@ const NavigationBar = () => {
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
-          if (route.name === 'Home') iconName = focused ? 'home' : 'home-outline';
-          else if (route.name === 'Paper') iconName = focused ? 'document' : 'document-outline';
-          else if (route.name === 'Book') iconName = focused ? 'book' : 'book-outline';
+          if (route.name === 'Dashboard') iconName = focused ? 'home' : 'home-outline';
+          else if (route.name === 'Feed') iconName = focused ? 'document' : 'document-outline';
+          else if (route.name === 'Learn') iconName = focused ? 'book' : 'book-outline';
           else if (route.name === 'Profile') iconName = focused ? 'person' : 'person-outline';
 
-          return <Icon name={iconName} size={size} color={color} />;
+          return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: 'tomato',
-        tabBarInactiveTintColor: 'gray',
+        tabBarActiveTintColor: 'lightblue',
+        tabBarInactiveTintColor: 'lightblue',
+        tabBarStyle: {
+          backgroundColor: '#FFFFFF', // Set your desired tab bar background color
+        },
       })}
     >
-      {/* <Tab.Screen name="Dashboard" component={Dashboard} />
+      <Tab.Screen name="Dashboard" component={Dashboard} />
       <Tab.Screen name="Feed" component={Feed} />
       <Tab.Screen name="Learn" component={Learn} />
-      <Tab.Screen name="Profile" component={Profile} /> */}
+      <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
   );
 };
@@ -54,7 +58,6 @@ const App = () => {
         <Stack.Screen name="TimeInput" component={TimeInput} />
         <Stack.Screen name="ModeSelector" component={ModeSelector} />
         <Stack.Screen name="Friends" component={Friends} />
-        <Stack.Screen name="Learn" component={Learn} />
 
         <Stack.Screen
           name="Dashboard"
@@ -66,11 +69,11 @@ const App = () => {
           component={NavigationBar}
           options={{ headerShown: false }}
         />
-         {/* <Stack.Screen
+         <Stack.Screen
           name="Learn"
           component={NavigationBar} 
           options={{ headerShown: false }} 
-        /> */}
+        />
         <Stack.Screen
           name="Profile"
           component={NavigationBar}
