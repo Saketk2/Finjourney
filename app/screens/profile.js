@@ -77,11 +77,18 @@ const styles = StyleSheet.create({
         backgroundColor: '#10C1F1',
         padding: 15,
         borderRadius: 10, // Rounded corners
-        borderColor: '#000', // Black border color
-        borderWidth: 1, // Border width for outline
         height: 40, // Fixed height for the button
         justifyContent: 'center', // Vertically center content
         alignItems: 'center', // Horizontally center content
+        borderColor: '#fff', // Border color
+        borderWidth: 0.5,
+        // Shadow for iOS
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 4,
+        // Shadow for Android
+        elevation: 5,
     },
     buttonText: {
         color: '#fff',
