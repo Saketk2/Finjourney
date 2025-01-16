@@ -8,24 +8,20 @@ const Feed = () => {
     };
 
     return (
-        <LinearGradient
-        colors={['rgba(16, 193, 241, 0.6)', 'rgba(245, 40, 145, 0.3)']}
-        start={{ x: 0, y: 0 }}  
-        end={{ x: 1, y: 1 }}  
-        style={styles.container}
-        >
+        <View style = {styles.container}>
             <View style={styles.innerContainer}>
                 <TouchableOpacity style={styles.button} onPress={handleFriends}>
                     <Text style={styles.buttonText}>Friends</Text>
                 </TouchableOpacity>
             </View>
-        </LinearGradient>
+        </View>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: 'rgba(245, 40, 145, 0.4)',
     },
     innerContainer: {
         flex: 1,

@@ -11,13 +11,9 @@ const Profile = () => {
     };
 
     return (
-        <LinearGradient
-        colors={['rgba(16, 193, 241, 0.4)', 'rgba(16, 241, 77, 0.4)']}
-        start={{ x: 0, y: 0 }}  
-        end={{ x: 1, y: 1 }}  
-        style={styles.container}
-        >
+        <View style = {styles.container}>
             <View style={styles.innerContainer}>
+                <Text style = {styles.header}>My Profile</Text>
                 <Text style={styles.label}>Name</Text>
                 <TextInput
                     style={styles.input}
@@ -45,13 +41,15 @@ const Profile = () => {
                     <Text style={styles.buttonText}>Save</Text>
                 </TouchableOpacity>
             </View>
-        </LinearGradient>
+        </View>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        justifyContent: 'center',
+        backgroundColor: 'rgba(32, 205, 59, 0.4)',
     },
     innerContainer: {
         flex: 1,
@@ -59,6 +57,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderRadius: 16,
         margin: 20,
+    },
+    header: {
+        fontSize: 30,
+        textAlign: 'center',
     },
     label: {
         fontSize: 16,

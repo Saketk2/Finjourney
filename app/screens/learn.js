@@ -28,7 +28,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-start', // Align items at the top of the container
+    justifyContent: 'center', // Align items at the top of the container
     alignItems: 'center', // Center contents horizontally
     padding: 20, // Padding to add some space from the edges
     backgroundColor: '#f0e6a5',
