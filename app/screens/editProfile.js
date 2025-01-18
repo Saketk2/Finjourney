@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { View, TextInput, TouchableOpacity, Text, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient'; 
+import { useNavigation } from '@react-navigation/native';
 
-const Profile = ({navigation}) => {
+const EditProfile = ({navigation}) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
 
-    const handleEdit = () => {
-        navigation.navigate('EditProfile'); 
+    const handleSave = () => {
+        navigation.navigate('Profile'); 
     };
 
     return (
@@ -15,10 +16,30 @@ const Profile = ({navigation}) => {
             <View style={styles.innerContainer}>
                 <Text style = {styles.header}>My Profile</Text>
                 <Text style={styles.label}>Name</Text>
+                <TextInput
+                    style={styles.input}
+                    placeholder="Username"
+                    value={name}
+                    onChangeText={setName}
+                />
                 <Text style={styles.label}>Email</Text>
+                <TextInput
+                    style={styles.input}
+                    placeholder="Email"
+                    value={email}
+                    onChangeText={setEmail}
+                    keyboardType="email-address"
+                />
                 <Text style={styles.label}>Phone Number</Text>
-                <TouchableOpacity style={styles.button} onPress={handleEdit}>
-                    <Text style={styles.buttonText}>Edit</Text>
+                <TextInput
+                    style={styles.input}
+                    placeholder="Phone Number"
+                    value={email}
+                    onChangeText={setEmail}
+                    keyboardType="phone-number"
+                />
+                <TouchableOpacity style={styles.button} onPress={handleSave}>
+                    <Text style={styles.buttonText}>Save</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -41,14 +62,23 @@ const styles = StyleSheet.create({
     header: {
         fontSize: 30,
         textAlign: 'center',
-        marginBottom: 40,
+        marginBottom: 30,
     },
     label: {
         fontSize: 16,
         color: '#333',
-        marginBottom: 30,
+        marginBottom: 8,
         textAlign: 'center',
-
+    },
+    input: {
+        backgroundColor: '#fff',
+        padding: 10,
+        borderRadius: 14,
+        borderWidth: 1,
+        borderColor: '#ccc',
+        marginBottom: 20,
+        width: 150,
+        alignSelf: 'center',
     },
     button: {
         backgroundColor: '#10C1F1',
@@ -78,4 +108,4 @@ const styles = StyleSheet.create({
     
 });
 
-export default Profile;
+export default EditProfile;
