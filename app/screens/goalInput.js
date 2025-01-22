@@ -1,18 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const GoalInput = ({ handleNextPage }) => {
   const navigation = useNavigation();
   const [goal, setGoal] = useState('');
 
+  useEffect(() => {
+    const fetchGoal = async () => {
+      const savedGoal = await AsyncStorage.getItem('goal');
+      if (savedGoal) setGoal(savedGoal);
+    };
+    fetchGoal();
+  }, []);
+
+  const handleNext = async () => {
+    await AsyncStorage.setItem('goal', goal); // Save the goal
+    navigation.navigate('TimeInput'); // Navigate to the next screen
+  };
+
   const handleIdeaPage = () => {
     navigation.navigate('GoalIdeas'); // Ensure 'GoalIdeas' is the correct name used in your navigator
   };
 
-  const handleNext = () => {
-    navigation.navigate('TimeInput'); 
-  };
 
   return (
     <View style={styles.container}>
@@ -26,7 +37,7 @@ const GoalInput = ({ handleNextPage }) => {
         style={styles.input}
         placeholder="Enter your goal"
         value={goal}
-        onChangeText={text => setGoal(text)}
+        onChangeText={setGoal}
       />
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button} onPress={handleIdeaPage}>
