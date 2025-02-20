@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "531325213203",
+    "project_id": "finjourney-3b345",
+    "storage_bucket": "finjourney-3b345.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531325213203:android:a6ba4219dcc7410a643de6",
+        "android_client_info": {
+          "package_name": "com.anonymous.Finjourney"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkH-fRJSyGeS08qImxtCsVvt9qTZzDd4M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
